@@ -6,10 +6,21 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ShowAccountComponent } from './show-account/show-account.component';
 import {HttpClientModule} from '@angular/common/http';
+import { DocumentComponent } from './document/document.component';
+import { SearchloandetailsComponent } from './searchloandetails/searchloandetails.component';
+import { ShowDetailsComponent } from './show-details/show-details.component';
+import { AdminComponent } from './admin/admin.component';
+
 @NgModule({
   declarations: [
     AppComponent,
-    ShowAccountComponent
+    ShowAccountComponent,
+    DocumentComponent,
+    SearchloandetailsComponent,
+    ShowDetailsComponent,
+    AdminComponent,
+
+    
   ],
   imports: [
     BrowserModule,

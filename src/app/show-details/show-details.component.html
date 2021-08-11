@@ -1,0 +1,142 @@
+
+<div>
+
+    <form #myForm="ngForm" (ngSubmit)="saveData()">
+    <table class="table">
+        <tr>
+    <td><label for="customerid">Customer ID</label></td>
+    <td><input type="text" id="id" name="customerid"  #uid="ngModel"  placeholder="Enter Customer ID" [(ngModel)]="preview.customerid" required ></td>
+     
+    </tr>
+      <br>
+     
+    <tr>
+      
+    <td><label for="firstname">Customer FirstName</label></td>
+     <td><input type="text" id="fname" name="firstname" #un="ngModel" placeholder="Enter FirstName"  [(ngModel)]="preview.firstname" required  pattern="([A-Za-z]+(['|\-|\s]?[A-Za-z]+)*)+"></td>
+     <div  *ngIf="un.invalid && (un.dirty||un.touched)" style="color: red;">
+      <div *ngIf="un.errors?.required">First Name is required</div>
+    
+      <div *ngIf="un.errors?.pattern">First Name Is Invalid</div>
+    </div>
+     </tr>
+     <br>
+     <tr>
+        <td><label for="lastname">Customer LastName</label></td>
+       <td><input type="text" id="laname" name="lastname" #ul="ngModel" placeholder="Enter LastName" [(ngModel)]="preview.lastname" required pattern="([A-Za-z]+(['|\-|\s]?[A-Za-z]+)*)+"></td>
+       <div  *ngIf="un.invalid && (un.dirty||un.touched)" style="color: red;">
+        <div *ngIf="un.errors?.required">Last Name is required</div>
+      
+        <div *ngIf="un.errors?.pattern">Last Name Is Invalid</div>
+      </div>
+    </tr>
+    <br>
+    <tr>
+     <td><label for="nationality">Customer Nationality</label></td>
+    <!--<td><input type="text" id="nationality "name="nationality" placeholder="Enter Nationality" [(ngModel)]="preview.nationality" required></td>-->
+    <select name="nationality" #unation="ngModel" id="nation" [(ngModel)]="preview.nationality"required>
+      <option value="Indian">Indian</option>
+      <option value="American">American</option>
+      <option value="Canadian">Canadian</option>
+      </select>
+      <div  *ngIf="unation.invalid && (unation.dirty||unation.touched)" style="color: red;">
+        <div *ngIf="unation.errors?.required">Nationality is required</div>
+      </div>
+    </tr>
+    <br>
+    
+    <tr>
+     
+    <td><label for="Gender">Customer Gender</label></td>
+    <td><input type="radio" id="gender" name="Gender" #ugender="ngModel" value="Male" [(ngModel)]="preview.Gender"  required>Male</td>
+    <td><input type="radio" id="gender" name="Gender" #ugender="ngModel" value="Female" [(ngModel)]="preview.Gender"  required>Female</td>
+    <div  *ngIf="ugender.invalid && (ugender.dirty||ugender.touched)" style="color: red;">
+      <div *ngIf="ugender.errors?.required">Gender is required</div>
+    
+     
+    </div>
+    </tr>
+    
+    <br>
+    <tr>
+      <td><label for="address">Customer Address</label></td>
+      <td><textarea id="address" name="address"  #uadd="ngModel"  placeholder="Enter Residential Address" [(ngModel)]="preview.address" required></textarea></td>
+      <div  *ngIf="uadd.invalid && (uadd.dirty||uadd.touched)" style="color: red;">
+        <div *ngIf="uadd.errors?.required">Address  is required</div>
+           </div>
+    </tr>
+      <br>
+    <tr>
+      <td><label for="phonenumber">Customer Phone</label></td>
+        <td><input type="text" id="phone" name="phonenumber"  #uphone="ngModel" placeholder="Enter  PhoneNumber"[(ngModel)]="preview.phonenumber" required></td>
+        <div  *ngIf="uphone.invalid && (uphone.dirty||uphone.touched)" style="color: red;">
+          <div *ngIf="uphone.errors?.required">Phone Number  is required</div>
+             </div>
+     </tr>
+     <br>
+     <tr>
+        <td><label for="dateofbirth">Customer DOB</label></td>
+         <td><input type="date" name="dateofbirth" #udob="ngModel" [(ngModel)]="preview.dateofbirth" required></td>
+         <div  *ngIf="un.invalid && (un.dirty||un.touched)" style="color: red;">
+      <div *ngIf="un.errors?.required">DOB  is required</div>
+         </div>
+     </tr>
+     <br>
+      <tr>
+     <td><label for="emailid">Customer Email-ID</label></td>
+     <td><input type="text" id="email" name="emailid" #ue="ngModel" placeholder="Enter  Email-ID" [(ngModel)]="preview.emailid" required   pattern="[a-z0-9._%+-]+@[a-z0-9-]+\.[a-z]{2,4}$" ></td>
+     <div  *ngIf="ue.invalid && (ue.dirty||ue.touched)" style="color: red;">
+      <div *ngIf="ue.errors?.required">Email is required</div>
+      <div *ngIf="ue.errors?.pattern">Incorrect email</div>
+    </div>
+    </tr>
+      <br>
+     <tr>
+      <td><label for="annualincome">Customer Income</label></td>
+     <td><input type="text" id="income" name="annualincome"  #uincome="ngModel"  placeholder="Enter Annual Income" [(ngModel)]="preview.annualincome" required></td>
+     <div  *ngIf="uincome.invalid && (uincome.dirty||uincome.touched)" style="color: red;">
+      <div *ngIf="uincome.errors?.required">Income is required</div>
+      <div *ngIf="uincome.value==0">INVALID INCOME</div>
+    
+    
+    </div>
+     </tr>
+     <br>
+    <tr>
+    <td><label for="TYPEOFEMPLOYEMENT">Customer Employment Type</label></td>
+      <td><input type="text" id="employement" name="typeofemployement" #uetype="ngModel" placeholder="Enter Employment Type" [(ngModel)]="preview.typeofemployement" required></td>
+      <div  *ngIf="uetype.invalid && (uetype.dirty||uetype.touched)" style="color: red;">
+        <div *ngIf="uetype.errors?.required">Employment Type is required</div>
+       
+      
+      </div>
+      </tr>
+      <br>
+      
+    <tr>
+     
+        
+    <td><label for="retirementage">Customer Retirement Age</label></td>
+    <td><input type="text" id="age" name="retirementage"  #uage="ngModel" placeholder="Enter Retirement Age" [(ngModel)]="preview.retirementage" required ><td> 
+      <div  *ngIf="uetype.invalid && (uetype.dirty||uetype.touched)" style="color: red;">
+      <div *ngIf="uetype.errors?.required">AGE is required</div>
+      <div *ngIf="uage.value==0" style="color:red;">INVALID AGE</div>
+      </div>
+     </tr>
+     <br>
+     <tr>
+     <td><label for="organizationtype">Customer Organization Type</label></td>
+     <td><input type="text" id="orgtype" name="organizationtype"placeholder="Enter Organization Type" [(ngModel)]="preview.organizationtype" required></td>
+       </tr>
+       <br>
+    </table>
+    
+    
+    
+    <td><input type="submit"  value ="Save details" [disabled]="!myForm.valid"></td>
+
+    <button onclick="location.href='./document.component.html' " type="button">Next Page!</button>
+    
+    </form>
+    
+    </div>

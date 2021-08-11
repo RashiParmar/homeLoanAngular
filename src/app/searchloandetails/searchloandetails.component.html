@@ -1,0 +1,29 @@
+
+<table>
+    <tr>
+        <td>Enter LoanID <input type="text" placeholder="Enter LoanID" [(ngModel)]="loanId"><button (click)="searchByloanId()">Search</button> </td>       
+    </tr>
+</table>
+<div>
+    <table class="table">
+        <thead style="color: red;">
+            <th> Loan id</th>
+            <th> Loan Amount</th>
+            <th>Max loan amount</th>
+            <th>Interest rate </th>
+            <!-- <th>Pending amount</th> -->
+            <th>start date</th>
+            <th>End date</th>
+        </thead>
+        <tr *ngFor= "let l of ldx">
+            <td>{{l.loanid}}</td>
+            <td>{{l.loanamt}}</td>
+            <td>{{l.maxloanamt}}</td>
+            <td>{{l.interestrate}}</td>
+            <!-- <td>{{l.pendingamt}}</td> -->
+            <td>{{l.startdate}} </td>
+            <td>{{l.enddate}}</td>
+        </tr>
+    </table>
+
+</div>
