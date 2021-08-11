@@ -1,0 +1,26 @@
+<p>show-account works!</p>
+<div class="container">
+    <table>
+        <tr>
+            <td>Enter Account ID <input type="text" [(ngModel)]="accountid"><button (click)="findAccount()">Search</button> </td>  </tr>
+         
+    </table> 
+<table  class="table">
+    <thead style="color: blue;">
+        <th>Account ID</th>
+        <th>Applcation ID</th>
+        <th>IFSC Code</th>
+        <th>Loan ID</th>
+        <th>Account Password</th>
+        <th>Account Balance</th>
+    </thead>
+    <tr *ngFor="let a of ax1">
+       <td>{{a.accountid}}</td>
+       <td>{{a.applicationid}}</td>
+       <td>{{a.ifsccode}}</td>
+       <td>{{a.loanid}}</td>
+       <td>{{a. accountpassword}}</td>
+       <td>{{a.accountbalance}}</td>
+    </tr>
+</table>
+</div>
