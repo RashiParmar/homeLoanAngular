@@ -1,2 +1,23 @@
 <p>admin works!</p>
-
+<!-- <p>admin works!</p> -->
+<h1>Admin page</h1>
+<table border="1">
+    <thead style="color:rgb(75, 75, 189);">
+        <th>Customer Id</th>
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>Occupation type</th>
+        <th>Annual income</th>
+        
+        <!-- <th style="color:green">Approve</th>
+        <th style="color:red">Reject</th> -->
+        </thead>
+        <tr *ngFor="let a of accountDetails">
+                <td>{{a.oldid}}</td>
+                <td>{{a.user_firstname}}</td>
+                <td>{{a.user_lastname}}</td>
+                <td>{{a.user_grossannualincome}}</td>
+            <td> <button  style="color:green" >Approve</button></td>
+            <td> <button (click)="deleteRow(a.oldid)" style="color:red">Reject</button></td>
+        </tr>
+</table>

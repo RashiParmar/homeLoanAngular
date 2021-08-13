@@ -1,0 +1,291 @@
+body {
+    margin: 0;
+}
+
+.header1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    margin-left: 7vw;
+}
+
+.nav_bar {
+    padding: 25px;
+}
+
+.nav_list{
+    display: flex;
+    list-style: none;
+    font-size: 24px;
+    margin: 0;
+}
+
+li {
+    padding: 0 50px;
+
+}
+
+a {
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+}
+
+/* getting money */
+.getting_money {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 21vh;
+    /* background-image: url(./assets/how-it-works-background.jpg); */
+    height: 108vh;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+}
+
+.getting_main {
+
+    /* position: absolute;
+    top: 41vh; */
+    margin-left: 13vw;
+
+}
+
+.btns {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+}
+
+button {
+    padding: 15px;
+    background-color: aquamarine;
+    color: blue;
+    border: none;
+    border-radius: 50px;
+
+}
+button:hover{
+    background-color: yellowgreen;
+}
+
+.right_div {
+
+    background-color: white;
+    margin-right: 11vw;
+    width: 35vw;
+    height: 90vh;
+
+}
+
+.payment {
+    text-align: center;
+
+}
+
+.amount_details {
+    padding: 33px;
+}
+
+label {
+    color: gray;
+    line-height: 5vh;
+
+}
+
+input {
+    background: aliceblue;
+    /* max-width: 100%; */
+    width: 25vw;
+    height: 7vh;
+}
+
+.get_loan {
+    width: 25vw;
+    background-color: #3e467b;
+    color: #ffffff;
+}
+
+/* getting money */
+.steps {
+    display: flex;
+    justify-content: space-between;
+    padding: 70px 150px;
+}
+
+.stepp {
+    width: 23vw;
+}
+
+.same_icon {
+    margin-left: 48px;
+    padding: 40px;
+    border-radius: 50px;
+    background-color: lightgray;
+}
+
+/* application */
+.application {
+    padding: 50px 58px 50px 100px;
+    /* background-image: url("./assets/blue-poly-background.jpg"); */
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+}
+
+.getmoney {
+    color: white;
+    text-align: center;
+}
+
+.application_main {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 112px;
+    margin-top: 37px;
+    align-items: center;
+}
+
+.image {
+    height: 208px;
+}
+
+.application_content {
+    color: white;
+}
+
+/* manager contact */
+.manager {
+    padding: 50px 58px 50px 100px;
+}
+.getcall{
+    text-align: center;
+}
+.manager_main {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 112px;
+    margin-top: 37px;
+    align-items: center;
+}
+.image1{
+    height: 208px;
+}
+.approval{
+    padding: 50px 58px 50px 100px;
+    /* background-image: url("./assets/green-poly-background.jpg"); */
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+}
+
+/* why_choose */
+.why_choose{
+    padding: 50px 58px 50px 100px;
+    /* background-image: url("./assets/how-it-works-background.jpg"); */
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+}
+.clicks{
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+}
+.click_main{
+    display: flex;
+    padding:0 128px;
+    justify-content: space-between;
+    color: white;
+    margin-top: 32px;
+}
+.text{
+    color: white;
+    text-align: center;
+}
+.check_icon{
+    margin-right: 48px;
+    font-size: 38px !important;
+    color: aqua;
+}
+/*  */
+.choose_us{
+    padding: 19px 85px;
+}
+.choose_text{
+    text-align: center;
+}
+.combine3{
+    display: flex;
+    justify-content: space-between;
+    padding: 108px;
+    padding-top: 80px;
+}
+.divs{
+    background-color: lightgray;
+    padding: 41px 67px;
+    margin-right: 51px;
+}
+.howit{
+    color: rgb(11 13 103);
+    font-size: 21px;
+
+}
+
+/* footer */
+.address{
+    background-color: #2f2f2f;
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 147px;
+}
+.address_info{
+    display: flex;
+}
+.street{
+    margin-right: 85px;
+}
+
+/*  */
+.footer{
+    background-color: #1d1d1d;
+    padding: 30px 147px;
+}
+.footer_main{
+    display: flex;
+    justify-content: space-between;
+}
+.img_footer{
+    height: 87px;
+}
+.hours_list{
+    list-style: none;
+    padding: 0;
+    line-height: 33px;
+    font-weight: bold;
+}
+.hrs{
+    padding: 0px;
+    color: white;
+}
+footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    padding: 7px 68px;
+}
+.policy{
+    color: white;
+}
+.media_ul{
+    display: flex;
+    list-style: none;
+}

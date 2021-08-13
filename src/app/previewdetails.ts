@@ -12,4 +12,5 @@ annualincome?:number
 typeofemployement?:string
 retirementage?:number
 organizationtype?:string
+password?:String
 }

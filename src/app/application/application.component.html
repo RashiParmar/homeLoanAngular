@@ -1,0 +1,41 @@
+<p>application works!</p>
+<div>
+    <form #myForm="ngForm" (ngSubmit)="saveData()">
+        <table>
+            <tr>
+                <td><label for="applicationid">Application ID</label> </td>   
+                <td><input  type="text" name="applicationid" [(ngModel)]="app.applicationid" required></td>       
+            </tr>
+            <tr>
+                <td><label for="custid">Customer ID</label> </td>   
+                <td><input  type="number" name="custid" [(ngModel)]="app.custid" required></td>       
+            </tr>
+            <tr>
+                <td><label for="propertyname">Property Name</label> </td>   
+                <td><input  type="text" name="propertyname" [(ngModel)]="app.propertyname" ></td>       
+            </tr>
+            <tr>
+                <td><label for="propertylocation">Property Location</label> </td>   
+                <td><input  type="text" name="propertylocation" [(ngModel)]="app.propertylocation" required></td>       
+            </tr>
+            <tr>
+                <td><label for="estimatedamount">Estimated Amount</label> </td>   
+                <td><input  type="number" name="estimatedamount" [(ngModel)]="app.estimatedamount" required></td>       
+            </tr>
+            <tr>
+                <td><label for="loanstatus">Loan Status</label> </td>   
+                <td><input  type="text" name="loanstatus" [(ngModel)]="app.loanstatus" required></td>       
+            </tr>
+            <tr>
+                <td></td>   
+                <td><input type="submit" value="Save t" [disabled]="!myForm.valid"></td>       
+            </tr>
+            <tr>
+                <td></td>   
+                <td><button (click)="Home()">Home</button></td>       
+            </tr>
+
+    </table>
+
+    </form>    
+</div>

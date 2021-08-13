@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DocumentService } from '../document.service';
 import { Document } from '../document';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-document',
   templateUrl: './document.component.html',
@@ -10,7 +11,7 @@ export class DocumentComponent implements OnInit {
 
   doc:Document;
 
-  constructor(private docservice:DocumentService) { 
+  constructor(private docservice:DocumentService, private router:Router) { 
     this.doc=new Document();
   }
 
@@ -27,4 +28,8 @@ export class DocumentComponent implements OnInit {
       )
     
   }
+  ApplicationDetails(){
+    this.router.navigate(['application']);
+  }
+  
 }

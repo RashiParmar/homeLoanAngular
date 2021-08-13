@@ -1,0 +1,64 @@
+<p>calculator works!</p>
+<div class="radio">  
+    <label>  
+        <input type="radio" name="RB" value="calForm" (click)="setradio('calForm')" [checked]='true' ngModel>  
+       Eligibility Calculator  
+    </label>  
+</div>  
+<div class="radio">  
+ <label>  
+        <input type="radio" name="RB" value="EMIForm"  (click)="setradio('EMIForm')"  ngModel>  
+        EMI Calculator 
+    </label>  
+</div>
+<div *ngIf="isSelected('calForm')"> 
+<form #calForm ="ngForm" (ngSubmit)="formSubmit(calForm)" novalidate>
+    <table>
+      
+        <tr>
+                <td>Monthly Income</td>
+                <td><input  type="number" id="m_income" name="m_income" [(ngModel)]="income" ></td>
+            </tr>
+            <tr>
+                <td>ROI</td>
+                <td><input  type="number" id="roi" name="roi" [(ngModel)]="rate"></td>
+            </tr>
+            <tr>
+                <td>calculate</td>
+                <td><button type="submit"  (click)="calculate()">Calculate</button></td>
+            </tr>
+            <tr>
+                <td>Eligibility</td>
+                <td ><input  type="number" [value]=loan></td>
+            </tr>
+    </table>
+    </form>
+</div> 
+
+<div *ngIf="isSelected('EMIForm')" >
+    <form #EMIForm ="ngForm" (ngSubmit)="formSubmit1(EMIForm)" novalidate>
+        <table>
+            
+            <tr>
+                <td>Loan</td>
+                <td><input type="number" name="loan" id="loan" [(ngModel)]="principle"></td>
+            </tr>
+            <tr>
+                <td>Tenure</td>
+                <td><input type="number" name="tenure" id="tenure" [(ngModel)]="time"></td>
+            </tr>
+            <tr>
+                <td>ROI</td>
+                <td><input type="text" name="roi"  id="roi" [(ngModel)]="r"></td>
+            </tr>
+            <tr>
+                <td>calculate</td>
+                <td><button type="submit"  (click)="calculateEMI()">Calculate</button></td>
+            </tr>
+            <tr>
+                <td>EMI</td>
+                <td><input type="number" name="emi" id="emi" [value]=Emi></td>
+            </tr>
+        </table>
+    </form>
+</div>

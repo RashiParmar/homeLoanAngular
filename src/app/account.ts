@@ -3,8 +3,6 @@ export class Account {
     applicationid?:string
     ifsccode?:string
     loanid?:string
-    accountpassword?:string
     accountbalance?:number
 
-   
 }

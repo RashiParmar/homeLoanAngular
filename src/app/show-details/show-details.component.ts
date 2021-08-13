@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { CustomerService } from '../customer.service';
 import { Previewdetails } from '../previewdetails';
 
@@ -10,13 +11,11 @@ import { Previewdetails } from '../previewdetails';
 export class ShowDetailsComponent implements OnInit {
   preview:Previewdetails;
   public isValid:number=0;
-  constructor(private personalservice:CustomerService) 
+  constructor(private personalservice:CustomerService , private router:Router) 
   {
+    
 this.preview=new Previewdetails();
    }
-
- 
-
   ngOnInit(): void {
   }
   
@@ -32,4 +31,10 @@ this.preview=new Previewdetails();
 
    )
   }
+  NextDoc(){
+    this.router.navigate(['document']);
+  }
+
+
+
 }

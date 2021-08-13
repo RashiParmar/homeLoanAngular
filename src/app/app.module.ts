@@ -10,6 +10,14 @@ import { DocumentComponent } from './document/document.component';
 import { SearchloandetailsComponent } from './searchloandetails/searchloandetails.component';
 import { ShowDetailsComponent } from './show-details/show-details.component';
 import { AdminComponent } from './admin/admin.component';
+import { ApplicationComponent } from './application/application.component';
+import { HomeComponent } from './home/home.component';
+import { CalculatorComponent } from './calculator/calculator.component';
+import { LoginComponent } from './login/login.component';
+import { FaqComponent } from './faq/faq.component';
+import { AboutusComponent } from './aboutus/aboutus.component';
+import { SignupComponent } from './signup/signup.component';
+
 
 @NgModule({
   declarations: [
@@ -19,6 +27,14 @@ import { AdminComponent } from './admin/admin.component';
     SearchloandetailsComponent,
     ShowDetailsComponent,
     AdminComponent,
+    ApplicationComponent,
+    HomeComponent,
+    CalculatorComponent,
+    LoginComponent,
+    FaqComponent,
+    AboutusComponent,
+    SignupComponent,
+   
 
     
   ],

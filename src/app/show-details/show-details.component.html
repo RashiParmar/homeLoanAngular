@@ -78,10 +78,18 @@
         <td><label for="dateofbirth">Customer DOB</label></td>
          <td><input type="date" name="dateofbirth" #udob="ngModel" [(ngModel)]="preview.dateofbirth" required></td>
          <div  *ngIf="un.invalid && (un.dirty||un.touched)" style="color: red;">
-      <div *ngIf="un.errors?.required">DOB  is required</div>
+         <div *ngIf="un.errors?.required">DOB  is required</div>
          </div>
      </tr>
      <br>
+     <input type="text" name="upass" #up="ngModel" placeholder="Enter password" required 
+        pattern="^(?=.[a-z])(?=.[A-Z])(?=.\d)(?=.[@$!%?&])[A-Za-z\d@$!%?&]{8,}$"
+        [(ngModel)]="preview.password">
+        <!-- {{up.className}}<br><br> -->
+        <div  *ngIf="up.invalid && (up.dirty||up.touched)" style="color: red;">
+            <div *ngIf="up.errors?.required">Password is required</div>
+            <div *ngIf="up.errors?.pattern"> Weak password</div>
+        </div><br> 
       <tr>
      <td><label for="emailid">Customer Email-ID</label></td>
      <td><input type="text" id="email" name="emailid" #ue="ngModel" placeholder="Enter  Email-ID" [(ngModel)]="preview.emailid" required   pattern="[a-z0-9._%+-]+@[a-z0-9-]+\.[a-z]{2,4}$" ></td>
@@ -135,7 +143,7 @@
     
     <td><input type="submit"  value ="Save details" [disabled]="!myForm.valid"></td>
 
-    <button onclick="location.href='./document.component.html' " type="button">Next Page!</button>
+    <button (click)="NextDoc()" >Next</button>
     
     </form>
     
