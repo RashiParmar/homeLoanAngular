@@ -1,0 +1,32 @@
+.container{
+
+    border-style: groove;
+    width: 500px;
+    height: 220px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    align-items: center;
+
+    
+    }
+    .container input{
+        border-style: solid;
+        width:300px;
+        
+    }
+    .container button{
+        width: 110px;
+        margin: 10px;
+    }
+    .logo{
+        text-align: center;
+        font-size: x-large;
+        font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    
+    }
+    .button{
+        text-align:left;
+        border: 40px;
+    }
+    h2{
+        text-align: center;
+    }

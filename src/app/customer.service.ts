@@ -10,15 +10,16 @@ export class CustomerService {
   constructor(private httpClient:HttpClient) { }
   baseUrl:string="http://localhost:9898/homeloanrest/api";
 
-  getAll()
+  getCustomer()
 {
-  return this.httpClient.get(this.baseUrl+"/personal");
+  return this.httpClient.get(this.baseUrl+"/customer");
 }
 
 addValue(preview:Previewdetails)
 {
-  return this.httpClient.post(this.baseUrl+"/personal",preview);
+  return this.httpClient.post(this.baseUrl+"/customer",preview);
 }
+
 
 
 }

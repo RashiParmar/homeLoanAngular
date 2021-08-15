@@ -1,41 +1,84 @@
-<p>application works!</p>
-<div>
+
+<!-- <div>
     <form #myForm="ngForm" (ngSubmit)="saveData()">
         <table>
             <tr>
-                <td><label for="applicationid">Application ID</label> </td>   
-                <td><input  type="text" name="applicationid" [(ngModel)]="app.applicationid" required></td>       
-            </tr>
-            <tr>
                 <td><label for="custid">Customer ID</label> </td>   
-                <td><input  type="number" name="custid" [(ngModel)]="app.custid" required></td>       
+                <td><input  type="number" name="custid" [(ngModel)]="application.custid" required></td>       
             </tr>
             <tr>
                 <td><label for="propertyname">Property Name</label> </td>   
-                <td><input  type="text" name="propertyname" [(ngModel)]="app.propertyname" ></td>       
+                <td><input  type="text" name="propertyname" [(ngModel)]="application.propertyname" ></td>       
             </tr>
             <tr>
                 <td><label for="propertylocation">Property Location</label> </td>   
-                <td><input  type="text" name="propertylocation" [(ngModel)]="app.propertylocation" required></td>       
+                <td><input  type="text" name="propertylocation" [(ngModel)]="application.propertylocation" required></td>       
             </tr>
             <tr>
                 <td><label for="estimatedamount">Estimated Amount</label> </td>   
-                <td><input  type="number" name="estimatedamount" [(ngModel)]="app.estimatedamount" required></td>       
+                <td><input  type="number" name="estimatedamount" [(ngModel)]="application.estimatedamount" required></td>       
             </tr>
             <tr>
                 <td><label for="loanstatus">Loan Status</label> </td>   
-                <td><input  type="text" name="loanstatus" [(ngModel)]="app.loanstatus" required></td>       
+                <td><input  type="text" name="loanstatus" [(ngModel)]="application.loanstatus" required></td>       
             </tr>
             <tr>
                 <td></td>   
                 <td><input type="submit" value="Save t" [disabled]="!myForm.valid"></td>       
             </tr>
+            <button class="btn btn-warning" button style="height:40px; width:80px;" type="submit" >Apply</button>
+            (click)="displayApplication()"
+             
             <tr>
                 <td></td>   
                 <td><button (click)="Home()">Home</button></td>       
             </tr>
 
-    </table>
+    </table> 
+
+    </form>    
+</div>-->
+
+
+
+<p>application works!</p>
+<div class="container">
+    <form #DocForm="ngForm" (ngSubmit)="saveData()">
+        <h2>Application Form</h2>
+        <hr/>
+        <br/>
+
+                <p>
+                <label for="custid">Customer ID</label>  
+                <input  type="number" name="custid" [(ngModel)]="customerid" required>       
+                <p>
+                <p>
+                <label for="propertyname">Property Name</label>  
+                <input  type="text" name="propertyname" [(ngModel)]="application.propertyname" >      
+                <p>
+                <p>
+                <label for="propertylocation">Property Location</label>  
+                <input  type="text" name="propertylocation" [(ngModel)]="application.propertylocation" required>      
+                <p>
+                <p>
+                <label for="estimatedamount">Estimated Amount</label> 
+                <input  type="number" name="estimatedamount" [(ngModel)]="application.estimatedamount" required>      
+                <p>
+                <p>
+                <label for="loanstatus">Loan Status</label> 
+                <input  type="text" name="loanstatus" [(ngModel)]="application.loanstatus" required>      
+                <p>
+                
+                   
+               <input type="button" value="Submit" class="btn btn-primary" [disabled]="!DocForm.valid">     
+            
+           <br>
+           <br>
+                  
+                <button (click)="Home()" class="btn btn-primary">Home</button>       
+            
+
+   
 
     </form>    
 </div>

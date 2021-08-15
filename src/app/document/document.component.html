@@ -1,33 +1,58 @@
-
+<!-- 
 <div>
     <form #myForm="ngForm" (ngSubmit)="saveData()">
         <table>
-            <tr>
-                <td><label for="docid">Document ID</label> </td>   
-                <td><input  type="number" name="docid" [(ngModel)]="doc.docid" required></td>       
-            </tr>
+        
             <tr>
                 <td><label for="custid">Customer ID</label> </td>   
-                <td><input  type="number" name="custid" [(ngModel)]="doc.custid" required></td>       
+                <td><input  type="number" name="custid" [(ngModel)]="customerid" required></td>       
             </tr>
             <tr>
                 <td><label for="pancardnum">Pan Card Number</label> </td>   
-                <td><input  type="text" name="pancardnum" [(ngModel)]="doc.pancardnum" required></td>       
+                <td><input  type="text" name="pancardnum" [(ngModel)]="document.pancardnum" required></td>       
             </tr>
             <tr>
                 <td><label for="aadharcardnum">Aadhar Card Number</label> </td>   
-                <td><input  type="number" name="aadharcardnum" [(ngModel)]="doc.aadharcardnum" required></td>       
+                <td><input  type="number" name="aadharcardnum" [(ngModel)]="document.aadharcardnum" required></td>       
             </tr>
             <tr>
                 <td><label for="voteridnum">Voter ID Number</label> </td>   
-                <td><input  type="text" name="voteridnum" [(ngModel)]="doc.voteridnum" required></td>       
+                <td><input  type="text" name="voteridnum" [(ngModel)]="document.voteridnum" required></td>       
             </tr>
             <tr>
                 <td></td>   
-                <td><input type="submit" value="Save" [disabled]="!myForm.valid" ></td>       
+                <td><button type="submit" >Save</button></td>     
             </tr>
-            <button type="button" (click)="ApplicationDetails()">Submit</button>
+            <button type="button" (click)="ApplicationDetails()">Next</button>
     </table>
+
+    </form>    
+</div> -->
+
+<div class="container">
+    <form #myForm="ngForm" (ngSubmit)="saveData()">
+        <h2>User Document Details</h2>
+            <p>
+                <label for="custid">Customer ID</label>    
+                <input  type="number" name="custid" [(ngModel)]="customerid" required>       
+            </p>
+            <p>
+                <label for="pancardnum">Pan Card Number</label>    
+                <input  type="text" name="pancardnum" [(ngModel)]="document.pancardnum" required>       
+            </p> 
+                <p>
+            <label for="aadharcardnum">Aadhar Card Number</label>   
+            <input  type="number" name="aadharcardnum" [(ngModel)]="document.aadharcardnum" required>       
+        </p>
+            <p>
+                <label for="voteridnum">Voter ID Number</label>  
+                <input  type="text" name="voteridnum" [(ngModel)]="document.voteridnum" required>       
+            </p>
+                <p>
+                <input type="button" value="Save" class="btn btn-primary" [disabled]="!myForm.valid" >      
+            </p>
+            <button type="button" (click)="ApplicationDetails()" class="btn btn-primary">Next</button>
+    
 
     </form>    
 </div>

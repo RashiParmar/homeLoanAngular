@@ -20,4 +20,8 @@ export class ApplicationService {
   addApplication(application:Application){
     return this.httpClient.post(this.baseUrl+"/application/",application);
   }
+
+  // deleteApp(application:Application){
+  //  return this.httpClient.delete(this.baseUrl+"/application/",application);
+  // }
 }

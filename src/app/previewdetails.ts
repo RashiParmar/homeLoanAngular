@@ -1,9 +1,9 @@
 export class Previewdetails {
-customerid?:number
+customerid:number=0;
 firstname?:string
 lastname?:string
 nationality?:number
-Gender?:string
+gender?:string
 address?:string
 phonenumber?:string
 dateofbirth?:string
@@ -12,5 +12,6 @@ annualincome?:number
 typeofemployement?:string
 retirementage?:number
 organizationtype?:string
+employername?:string
 password?:String
 }

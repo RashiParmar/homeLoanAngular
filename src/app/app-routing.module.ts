@@ -1,23 +1,33 @@
 import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AdminComponent } from './admin/admin.component';
+import { AdminloginComponent } from './adminlogin/adminlogin.component';
 import { ApplicationComponent } from './application/application.component';
 import { CalculatorComponent } from './calculator/calculator.component';
 import { DocumentComponent } from './document/document.component';
+import { FaqComponent } from './faq/faq.component';
 import { HomeComponent } from './home/home.component';
-import { SearchloandetailsComponent } from './searchloandetails/searchloandetails.component';
+import { LoginComponent } from './login/login.component';
 import { ShowAccountComponent } from './show-account/show-account.component';
 import { ShowDetailsComponent } from './show-details/show-details.component';
 import { SignupComponent } from './signup/signup.component';
 
 const routes: Routes = [
-  {path:'show-account',component:ShowDetailsComponent},
+  {path:'login',component:LoginComponent},
+  {path:'customer',component:ShowDetailsComponent},
   {path:'document',component:DocumentComponent},
-  {path:'loandetails',component:SearchloandetailsComponent},
-  {path:'account',component:ShowAccountComponent},
   {path:'application',component:ApplicationComponent},
+  {path:'adminlogin', component:AdminloginComponent},
+  {path:'admin', component:AdminComponent},
+  {path:'account',component:ShowAccountComponent},
+  {path:'faq',component:FaqComponent},
+ 
+  // {path:'signup', component:SignupComponent},
   {path:'calculator',component:CalculatorComponent},
-  {path:'signup', component:SignupComponent},
   {path:'home', component:HomeComponent},
+ 
+ 
+
 
   
 

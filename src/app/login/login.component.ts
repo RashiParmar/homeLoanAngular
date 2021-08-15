@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { LoanDetails } from '../loan-details';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-login',
@@ -11,7 +12,7 @@ export class LoginComponent implements OnInit {
   loanid?:any;
   pass?:any;
   customerid?:any;
-  constructor() { }
+  constructor(private router:Router) { }
 
   ngOnInit(): void {
   }
@@ -60,4 +61,13 @@ export class LoginComponent implements OnInit {
   {
     console.log(loan.value);
   }
+
+  NewUser(){
+    this.router.navigate(['customer'])
+  }
+
+  Admin(){
+    this.router.navigate(['adminlogin'])
+  }
+
 }

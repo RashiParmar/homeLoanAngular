@@ -1,8 +1,13 @@
 export class Account {
-    accountid?:number
-    applicationid?:string
+    loanid?:number
+    loanamount?:number
+    interestrate?:number
+    pendingamount?:number
+    startdate?:Date
+    enddate?:Date
+    applicationid?:number
     ifsccode?:string
-    loanid?:string
     accountbalance?:number
+
 
 }

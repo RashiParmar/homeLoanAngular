@@ -7,7 +7,6 @@ import { AppComponent } from './app.component';
 import { ShowAccountComponent } from './show-account/show-account.component';
 import {HttpClientModule} from '@angular/common/http';
 import { DocumentComponent } from './document/document.component';
-import { SearchloandetailsComponent } from './searchloandetails/searchloandetails.component';
 import { ShowDetailsComponent } from './show-details/show-details.component';
 import { AdminComponent } from './admin/admin.component';
 import { ApplicationComponent } from './application/application.component';
@@ -17,6 +16,8 @@ import { LoginComponent } from './login/login.component';
 import { FaqComponent } from './faq/faq.component';
 import { AboutusComponent } from './aboutus/aboutus.component';
 import { SignupComponent } from './signup/signup.component';
+import { SearchCustomerComponent } from './search-customer/search-customer.component';
+import { AdminloginComponent } from './adminlogin/adminlogin.component';
 
 
 @NgModule({
@@ -24,7 +25,6 @@ import { SignupComponent } from './signup/signup.component';
     AppComponent,
     ShowAccountComponent,
     DocumentComponent,
-    SearchloandetailsComponent,
     ShowDetailsComponent,
     AdminComponent,
     ApplicationComponent,
@@ -34,6 +34,8 @@ import { SignupComponent } from './signup/signup.component';
     FaqComponent,
     AboutusComponent,
     SignupComponent,
+    SearchCustomerComponent,
+    AdminloginComponent,
    
 
     

@@ -1,21 +1,47 @@
-<p>signup works!</p>
-<form #empForm ="ngForm" (ngSubmit)="formSubmit(empForm)" novalidate>
-    <table>
+ <!-- <p>signup works!</p>
+<div class="container">
+<form #empForm ="ngForm" (ngSubmit)="saveData()" novalidate>
+  <h2> User Registration</h2>
+  <hr/>
+  <br/>
+
+    
       
-      <tr>
-        <td><label for="name"> First Name</label></td>
-        <td><input type="text" id="ename" name="empname" required minlength="5"  ngModel></td>
-      </tr>
-      <tr>
-        <td><label for="email">Email ID</label></td>
-        <td><input type="text" id="email" name="email" required email ngModel></td>
-      </tr>
-      <tr>
-        <td><label for="pwd">Password</label></td>
-        <td><input type="password" id="pwd" name="pwd" required ngModel></td>
-      </tr>
-      <tr>
-        <td><button type="reset">Reset</button></td>
-        <td><button type="submit" [disabled]="!empForm.valid">Register</button></td>
-      </tr>
-    </table>
+      <p>
+        <label for="firstname"> First Name</label>
+        <input type="text" id="firstname" name="firstname" #un="ngModel" placeholder="Enter First Name"  [(ngModel)]="signup.firstname" required  pattern="([A-Za-z]+(['|\-|\s]?[A-Za-z]+)*)+">
+        <div *ngIf="un.invalid && (un.dirty||un.touched)" style="color: red;">
+        <div *ngIf="un.errors?.required">First Name is required</div>
+        <div *ngIf="un.errors?.pattern">First Name Is Invalid</div>
+        </div>
+     
+
+      <p>
+        <label for="email">Email ID</label>
+        <input type="text" id="email" name="emailid" #ue="ngModel" placeholder="Enter  Email-ID" [(ngModel)]="signup.emailid" required   pattern="[a-z0-9._%+-]+@[a-z0-9-]+\.[a-z]{2,4}$" >
+     <div  *ngIf="ue.invalid && (ue.dirty||ue.touched)" style="color: red;">
+      <div *ngIf="ue.errors?.required">Email is required</div>
+      <div *ngIf="ue.errors?.pattern">Incorrect email</div>
+    </div>
+      
+    
+
+      <p>
+        <label for="pwd">Password</label>
+        <input type="password" id="pwd" name="pwd" #up ="ngModel" placeholder="Enter Password" [(ngModel)]="signup.password" required >
+        <div  *ngIf="up.invalid && (ue.dirty||up.touched)" style="color: red;">
+          <div *ngIf="up.errors?.required">Password is required</div>
+          <div *ngIf="up.errors?.pattern">Incorrect password</div>
+          </div>
+   
+        <button type="reset" class="btn btn-primary" (click)="saveData()" [disabled]="!empForm.valid">Save</button>
+
+        <br>
+        <br>
+
+        <button (click)="NextDoc()" (click)="callCustomer()"  class="btn btn-primary"  >Next Document</button>
+
+      
+    </form>
+  </div>
+    -->

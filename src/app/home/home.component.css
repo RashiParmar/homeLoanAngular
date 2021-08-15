@@ -1,6 +1,21 @@
 body {
     margin: 0;
 }
+    .bimage {
+        background-image: url("https://m.economictimes.com/thumb/msid-83033066,width-1200,height-900,resizemode-4,imgsize-202355/home-loan-above-rs-30-lakh-to-rs-75-lakh.jpg"); /* The image used */
+        background-color: #cccccc; /* Used if the image is unavailable */
+        height: 500px; /* You must set a specified height */
+        background-position: center; /* Center the image */
+        background-repeat: no-repeat; /* Do not repeat the image */
+        background-size: cover; /* Resize the background image to cover the entire container */
+      }
+
+.container{
+    display:contents;
+    justify-content:center;
+    padding-top: 21vh;     
+    }
+    
 
 .header1 {
     display: flex;
@@ -75,15 +90,17 @@ button:hover{
 
 .right_div {
 
-    background-color: white;
-    margin-right: 11vw;
+    /* background-color: white; */
+    margin: 11vw;
     width: 35vw;
     height: 90vh;
+    align-items: center;
 
 }
 
 .payment {
     text-align: center;
+    align-items: center;
 
 }
 
@@ -125,7 +142,7 @@ input {
     margin-left: 48px;
     padding: 40px;
     border-radius: 50px;
-    background-color: lightgray;
+    background-color: lightblue;
 }
 
 /* application */

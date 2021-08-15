@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { CustomerService } from '../customer.service';
 import { Previewdetails } from '../previewdetails';
 
@@ -10,29 +10,36 @@ import { Previewdetails } from '../previewdetails';
 })
 export class ShowDetailsComponent implements OnInit {
   preview:Previewdetails;
-  public isValid:number=0;
-  constructor(private personalservice:CustomerService , private router:Router) 
-  {
-    
-this.preview=new Previewdetails();
-   }
-  ngOnInit(): void {
-  }
-  
+
+  constructor(private customerService:CustomerService , 
+    private router:Router, private route:ActivatedRoute) 
+
+  {this.preview=new Previewdetails();}
+
+  ngOnInit(): void { }
+
+  message?:any={};
+
   saveData()
   {
-  //  console.log(this.preview.Address)
-   this.personalservice.addValue(this.preview).subscribe(
-    (data)=>
+   this.customerService.addValue(this.preview).subscribe((data)=>
     {
-      console.log("Return Value From Rest"+data);
-    }
-
-
-   )
+      console.log(data);
+      this.preview=data as Previewdetails;
+      localStorage.setItem("cid",this.preview.customerid.toString());})
+      alert("Your details has been saved");
   }
+
+
   NextDoc(){
-    this.router.navigate(['document']);
+    if(this.message!=null)
+     {
+      this.router.navigate(['document']);
+     }
+     else
+     {
+       alert("Please save the details before you continue");
+     }
   }
 
 

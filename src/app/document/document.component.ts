@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DocumentService } from '../document.service';
 import { Document } from '../document';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 @Component({
   selector: 'app-document',
   templateUrl: './document.component.html',
@@ -9,27 +9,39 @@ import { Router } from '@angular/router';
 })
 export class DocumentComponent implements OnInit {
 
-  doc:Document;
 
-  constructor(private docservice:DocumentService, private router:Router) { 
-    this.doc=new Document();
-  }
+  constructor(private docservice:DocumentService, private router:Router,private route: ActivatedRoute)
+     { this.document=new Document();}
 
-  ngOnInit(): void {
-  }
+    document:any;
+    customerid:any;
+    message:any;  
+    
+    ngOnInit(): void
+     {
+        this.customerid=localStorage.getItem("cid");
+        console.log(this.customerid);
+     }
+
+  
 
   saveData()
   {
-
-      this.docservice.addDocument(this.doc).subscribe(
+    this.customerid=localStorage.getItem("cid");
+    console.log(this.customerid);
+      this.docservice.addDocument(this.document).subscribe(
         (data)=>{
-          console.log("Return Value from REST"+data); 
-        }
-      )
-    
+          console.log(data);
+        this.message=data })
+          alert("Document Saved!");
   }
   ApplicationDetails(){
-    this.router.navigate(['application']);
+    // if(this.message!=null)
+    // {
+       this.router.navigate(['application']);
+    // }
+    // else{
+    //   alert("Please save the details before submitting");
+    // }
   }
-  
 }
