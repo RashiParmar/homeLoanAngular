@@ -24,4 +24,15 @@ export class ApplicationService {
   deleteApp(applicationid:number){
    return this.httpClient.delete(this.baseUrl+"/application/" +applicationid);
   }
+
+  findApplication(applicationid:number){
+    return this.httpClient.get(this.baseUrl+"/application/" +applicationid);
+  }
+
+  updateApplication(application:Application){
+    return this.httpClient.put(this.baseUrl+"/application/" +application.applicationid,application);
+  }
 }
+
+
+

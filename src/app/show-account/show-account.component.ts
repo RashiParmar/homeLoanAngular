@@ -119,7 +119,7 @@ export class ShowAccountComponent implements OnInit {
         {
           console.log(data);
           window.alert("Your Account is added");
-          this.router.navigate(['home']);
+          this.router.navigate(['admin']);
         
          })
          

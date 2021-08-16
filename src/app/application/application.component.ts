@@ -64,6 +64,7 @@ export class ApplicationComponent implements OnInit {
  {
        this.application.custid=localStorage.getItem("cid");
        console.log(this.application.custid);
+       this.application.loanstatus="Pending";
  }
  
  saveData()

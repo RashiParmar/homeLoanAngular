@@ -27,40 +27,29 @@
     </div>
  </div> -->
 
+<div *ngFor="let c of cdx" >
+    <h2> Hi {{c.firstname}}!</h2>
+    <hr/>
+ <h4>
+     Your Details 
+ </h4>
+<ul>
+    <li>
+     Email: {{c.emailid}}
+    </li>
+    <li>
+     Mobile: {{c.phonenumber}}
+    </li>
+    <li>
+     Annual Income: {{c.annualincome}}
+    </li>
+</ul>
+<button (click)="logout()">LogOut</button>
 
-
- <p>
-    Enter Customer Id
-</p>
-<table>
-<tr>
-<td><input type="text" placeholder="Enter Customer ID "  [(ngModel)]="customerid"><button (click)="searchbycustomerid()">Search</button></td>
-</tr>
-</table>
-<div>
-<br>
-<br>
-<table class="table1">
-    <thead style="color:green;">
-    <th>CustomerId</th>
-    <th>Customer Address</th>
-    <th>Customer Email-ID</th>
-    <th>Customer Annual Income</th>
-    <th>Customer Type Of Employment</th>
-    <th>Customer Organization Type</th>
-
-    
-    </thead>
-    <tr *ngFor="let c of cdx">
-    <td>{{c.customerid}}</td>
-    <td>{{c.address}}</td>
-    <td>{{c.emailid}}</td>
-    <td>{{c.annualincome}}</td>
-    <td>{{c.typeofemployement}}</td>
-    <td>{{c.organizationtype}}</td>
-
-
-
-    </tr>
-</table>
 </div>
+ 
+ 
+
+
+
+

@@ -21,36 +21,56 @@ export class AdminComponent implements OnInit {
     account?:any;
 
   ngOnInit(): void {
-    // this.accountService.getAccountAdmin().subscribe((data)=>{
-    //   console.log(data);
-    //   this.acc=data;
-    //   console.log(this.acc); })
-
-    // this.customerService.getCustomer().subscribe((data)=>{
-    //   console.log(data);
-    //   this.c1=data;
-    //   console.log(this.c1);  })
-
-      this.applicationService.getApplication().subscribe((data)=>{
-        console.log(data);
-        this.app1=data;
-        console.log(this.app1);
-      })
+    this.getAllApplications(); 
   }
 
+
+  getAllApplications(){
+    this.applicationService.getApplication().subscribe((data)=>{
+      console.log(data);
+      this.app1=data;
+      console.log(this.app1);
+    })
+  }
 
   deleteRow(applicationid:any){
     alert(applicationid)
     this.applicationService.deleteApp(applicationid).subscribe((data)=>{
       console.log(data);
     })
-    this.router.navigate([''])
+    this.router.navigate(['admin'])
   }
 
-  CreateAccount() 
+  CreateAccount(ap?:any) 
    {
-     window.alert("Approved");
-     this.router.navigate(['account']);
+      this.applicationService.updateApplication(ap).subscribe((data)=>
+      {
+        console.log(data);
+
+        this.getAllApplications();
+      })
+     
+
+//       this.applicationService.findApplication(id).subscribe((data)=>{
+//        console.log(data);
+//        this.app1=data as Application;
+//        this.app1.loanstatus="Approved"; 
+//  })
+    //  this.router.navigate(['account']);
+
+    //  this.applicationService.getApplication().subscribe((data)=>{
+    //   console.log(data);
+    //   this.app1=data as Application;
+    //   this.app1.loanstatus="Approved";
+
+    //   this.applicationService.updateApplication(this.app1).subscribe((data)=>
+    // {
+    //   console.log(data);
+    // })
+    // })
+
+    
+    //  this.router.navigate(['loanstatus'])
      
   //  this.accountService.addAccount(account).subscribe((data)=>{console.log(data);
   //   this.account=data });

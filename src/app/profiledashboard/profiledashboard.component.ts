@@ -14,15 +14,26 @@ export class ProfiledashboardComponent implements OnInit {
   cd1:Previewdetails=new Previewdetails();
   cdx=new Array<Previewdetails>();
   customerid:number=0;
-
+  cuId:any;
 
   ngOnInit(): void {
+    this.cuId=localStorage.getItem("cuID");
+    if(this.cuId==null){
+      this.router.navigate(['login']);
+    }
+
+    this.searchbycustomerid(this.cuId);
   }
 
+
+  logout(){
+    localStorage.removeItem("cuID");
+    this.router.navigate(['login']);
+  }
   details:any={};
-  searchbycustomerid()
+  searchbycustomerid(id?:any)
   {
-    this.customerService.searchbycustomerid(this.customerid).subscribe
+    this.customerService.searchbycustomerid(id).subscribe
     (
       (data:any)=>{
       console.log(data);

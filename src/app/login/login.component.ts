@@ -46,13 +46,14 @@ export class LoginComponent implements OnInit {
  } 
 
     loginForm()
-  {
+  { debugger;
   //window.alert("login form submitted");
   if(this.customerService.addLogin(this.customerid,this.password).subscribe(
     (data)=>
-    {console.log(data) 
-    }
-    )
+    {console.log(data) ;
+      console.log(this.customerid);
+      localStorage.setItem("cuID", this.customerid.toString());
+    })
     ){
       this.router.navigate(['profiledashboard']);
   }

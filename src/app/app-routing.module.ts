@@ -7,6 +7,7 @@ import { CalculatorComponent } from './calculator/calculator.component';
 import { DocumentComponent } from './document/document.component';
 import { FaqComponent } from './faq/faq.component';
 import { HomeComponent } from './home/home.component';
+import { LoanstatusComponent } from './loanstatus/loanstatus.component';
 import { LoginComponent } from './login/login.component';
 import { ProfiledashboardComponent } from './profiledashboard/profiledashboard.component';
 import { ShowAccountComponent } from './show-account/show-account.component';
@@ -23,6 +24,7 @@ const routes: Routes = [
   {path:'account',component:ShowAccountComponent},
   {path:'faq',component:FaqComponent},
   {path:'profiledashboard',component:ProfiledashboardComponent},
+  {path:'loanstatus',component:LoanstatusComponent},
 
  
   // {path:'signup', component:SignupComponent},

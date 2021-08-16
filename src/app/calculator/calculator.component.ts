@@ -36,7 +36,7 @@ export class CalculatorComponent implements OnInit {
 
   income:number=0;
   loan:number=0;
-  rate:number=0;
+  rate:number=0.6;
   calculate()
   {
     

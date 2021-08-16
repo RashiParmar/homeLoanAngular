@@ -19,6 +19,7 @@ import { SignupComponent } from './signup/signup.component';
 import { SearchCustomerComponent } from './search-customer/search-customer.component';
 import { AdminloginComponent } from './adminlogin/adminlogin.component';
 import { ProfiledashboardComponent } from './profiledashboard/profiledashboard.component';
+import { LoanstatusComponent } from './loanstatus/loanstatus.component';
 
 
 @NgModule({
@@ -38,6 +39,7 @@ import { ProfiledashboardComponent } from './profiledashboard/profiledashboard.c
     SearchCustomerComponent,
     AdminloginComponent,
     ProfiledashboardComponent,
+    LoanstatusComponent,
    
 
     

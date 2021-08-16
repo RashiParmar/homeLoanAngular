@@ -1,44 +1,4 @@
 
-<!-- <div>
-    <form #myForm="ngForm" (ngSubmit)="saveData()">
-        <table>
-            <tr>
-                <td><label for="custid">Customer ID</label> </td>   
-                <td><input  type="number" name="custid" [(ngModel)]="application.custid" required></td>       
-            </tr>
-            <tr>
-                <td><label for="propertyname">Property Name</label> </td>   
-                <td><input  type="text" name="propertyname" [(ngModel)]="application.propertyname" ></td>       
-            </tr>
-            <tr>
-                <td><label for="propertylocation">Property Location</label> </td>   
-                <td><input  type="text" name="propertylocation" [(ngModel)]="application.propertylocation" required></td>       
-            </tr>
-            <tr>
-                <td><label for="estimatedamount">Estimated Amount</label> </td>   
-                <td><input  type="number" name="estimatedamount" [(ngModel)]="application.estimatedamount" required></td>       
-            </tr>
-            <tr>
-                <td><label for="loanstatus">Loan Status</label> </td>   
-                <td><input  type="text" name="loanstatus" [(ngModel)]="application.loanstatus" required></td>       
-            </tr>
-            <tr>
-                <td></td>   
-                <td><input type="submit" value="Save t" [disabled]="!myForm.valid"></td>       
-            </tr>
-            <button class="btn btn-warning" button style="height:40px; width:80px;" type="submit" >Apply</button>
-            (click)="displayApplication()"
-             
-            <tr>
-                <td></td>   
-                <td><button (click)="Home()">Home</button></td>       
-            </tr>
-
-    </table> 
-
-    </form>    
-</div>-->
-
 <p>application works!</p>
 <div class="container">
     <form #DocForm="ngForm" (ngSubmit)="saveData()">
@@ -73,10 +33,10 @@
            <br>
            <br>
                   
-                <button (click)="Home()" class="btn btn-primary">Home</button>       
+                <button (click)="Home()" class="btn btn-primary">Home</button>   
+                  </form>    
+</div>    
             
 
-   
 
-    </form>    
-</div>
+          
