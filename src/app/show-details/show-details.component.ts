@@ -26,16 +26,11 @@ export class ShowDetailsComponent implements OnInit {
       this.preview=data as Previewdetails;
       localStorage.setItem("cid",this.preview.customerid.toString());})
       alert("Your details has been saved");
+      window.alert("Your Customer ID is:"+this.preview.customerid);
   }
 
 
   NextDoc(){
-
-
-      this.router.navigate(['document']);
-     
+      this.router.navigate(['document']);   
   }
-
-
-
 }

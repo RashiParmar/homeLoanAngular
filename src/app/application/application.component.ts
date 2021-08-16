@@ -82,18 +82,10 @@ export class ApplicationComponent implements OnInit {
    this.application=data as Application;
    localStorage.setItem("loanamt",this.application.estimatedamount); //to pass estimated amount
  })
-   alert("Application saved!");
+   alert("Your application is saved with Application ID: "+this.application.applicationid);
+
  }
 
- // displayApplication()
- // {
- //   if(this.message!=null)
- //   {
- //     alert("Application has been created of ID: "+this.message.applicationid);
- //     this.application={};
- //   }
-
-// }
  Home(){
    this.router.navigate(['home']);
  }

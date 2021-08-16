@@ -1,6 +1,6 @@
 .container{
 
-    border-style: groove;
+       
     width: 350px;
     height: 630px;
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -8,7 +8,7 @@
     
     }
     .container input{
-        border-style: solid;
+       
         width:300px;
         
     }
@@ -21,3 +21,14 @@
     h2{
         text-align: center;
     }
+
+    .bimage1 {
+        background-image: url("https://www.bajajallianz.com/blog/wp-content/uploads/2020/07/why-is-your-insurance-policy-document-important-1.jpg"); /* The image used */
+        background-color: #cccccc; /* Used if the image is unavailable */
+    /* You must set a specified height */
+   
+    background-position:centre; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: 1600px 900px; /* Resize the background image to cover the entire container */
+    margin: auto;
+      }

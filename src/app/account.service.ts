@@ -11,7 +11,7 @@ export class AccountService {
 
   baseUrl:string="http://localhost:9898/homeloanrest/api";
 
-  //RETRIEVING ALL ACCOUNT DETAIL
+
  findAccount(loanid:number){
     return this.httpClient.get(this.baseUrl+"/account/"+loanid);
   }

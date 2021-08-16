@@ -18,8 +18,6 @@ export class LoanstatusComponent implements OnInit {
   ngOnInit(): void {
   }
 
-
-
   loanStatus(){
     this.applicationService.findApplication(this.applicationid).subscribe
       (
@@ -28,9 +26,7 @@ export class LoanstatusComponent implements OnInit {
         this.l1=data as Application;
         this.lx.push(this.l1);
         console.log(this.l1.loanstatus);
-        this.status=this.l1.loanstatus;
-        }
-      )
+        this.status=this.l1.loanstatus; })
  
   }
 }

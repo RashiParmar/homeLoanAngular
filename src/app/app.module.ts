@@ -15,11 +15,11 @@ import { CalculatorComponent } from './calculator/calculator.component';
 import { LoginComponent } from './login/login.component';
 import { FaqComponent } from './faq/faq.component';
 import { AboutusComponent } from './aboutus/aboutus.component';
-import { SignupComponent } from './signup/signup.component';
-import { SearchCustomerComponent } from './search-customer/search-customer.component';
+
 import { AdminloginComponent } from './adminlogin/adminlogin.component';
 import { ProfiledashboardComponent } from './profiledashboard/profiledashboard.component';
 import { LoanstatusComponent } from './loanstatus/loanstatus.component';
+import { ErrorComponent } from './error/error.component';
 
 
 @NgModule({
@@ -35,11 +35,10 @@ import { LoanstatusComponent } from './loanstatus/loanstatus.component';
     LoginComponent,
     FaqComponent,
     AboutusComponent,
-    SignupComponent,
-    SearchCustomerComponent,
     AdminloginComponent,
     ProfiledashboardComponent,
     LoanstatusComponent,
+    ErrorComponent,
    
 
     

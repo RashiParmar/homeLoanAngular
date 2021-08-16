@@ -1,103 +1,11 @@
-<!-- <form #customerForm ="ngForm" (ngSubmit)="saveData()">
-  <table>
-    
-    <tr>
-      <td><label for="firstname"> First Name</label></td>
-      <td><input type="text" id="firstname" name="firstname" required   [(ngModel)]="preview.firstname"></td>
-    </tr>
-
-    <tr>
-      <td><label for="lastname"> Last Name</label></td>
-      <td><input type="text" id="lastname" name="lastname" required   [(ngModel)]="preview.lastname"></td>
-    </tr>
-
-    <tr>
-      <td><label for="nationality"> Nationality</label></td>
-      <td><input type="text" id="nationality" name="nationality" required   [(ngModel)]="preview.nationality"></td>
-    </tr>
-
-    <tr>
-      <td><label for="gender">Gender</label></td>
-      <td><input type="text" id="gender" name="gender" required   [(ngModel)]="preview.gender"></td>
-    </tr>
-
-    <tr>
-      <td><label for="address">Address</label></td>
-      <td><input type="text" id="address" name="address" required   [(ngModel)]="preview.address"></td>
-    </tr>
-
-    <tr>
-      <td><label for="phonenumber">Phone Number</label></td>
-      <td><input type="number" id="phonenumber" name="phonenumber" required   [(ngModel)]="preview.phonenumber"></td>
-    </tr>
-
-    <tr>
-      <td><label for="dateofbirth">Date of Birth</label></td>
-      <td><input type="date" id="dateofbirth" name="dateofbirth" required   [(ngModel)]="preview.dateofbirth"></td>
-    </tr>
-    
-    <tr>
-      <td><label for="emailid">Email ID</label></td>
-      <td><input type="text" id="emailid" name="emailid" required [(ngModel)]="preview.emailid"></td>
-    </tr>
-
-    <tr>
-      <td><label for="annualincome"> Annual Income</label></td>
-      <td><input type="number" id="annualincome" name="annualincome" required   [(ngModel)]="preview.annualincome"></td>
-    </tr>
-
-    <tr>
-      <td><label for="typeofemployement"> Type of Employment</label></td>
-      <td><input type="text" id="typeofemployement" name="typeofemployement" required   [(ngModel)]="preview.typeofemployement"></td>
-    </tr>
-
-    <tr>
-      <td><label for="retirementage"> Retirement Age</label></td>
-      <td><input type="number" id="retirementage" name="retirementage" required   [(ngModel)]="preview.retirementage"></td>
-    </tr>
-
-    <tr>
-      <td><label for="organizationtype"> Organization Type</label></td>
-      <td><input type="text" id="organizationtype" name="organizationtype"  [(ngModel)]="preview.organizationtype"></td>
-    </tr>
-
-    <tr>
-      <td><label for="employername"> Employer name</label></td>
-      <td><input type="text" id="employername" name="employername"  [(ngModel)]="preview.employername"></td>
-    </tr>
-    <tr>
-      <td><label for="password">Password</label></td>
-      <td><input type="password" id="password" name="password" required [(ngModel)]="preview.password"></td>
-    </tr>
-    <tr>
-      <td><button type="submit" >Save</button></td>
-      <button (click)="NextDoc()" >Next</button>
-    </tr>
-  </table>
-  </form> -->      
-
-
-
-  
+ 
 <div class="p-3 mb-2 bg-light text-dark">
 
   <form  class="was-validated" #myForm="ngForm" (ngSubmit)="saveData()" >
 
-    <h1 >Loan Application Form</h1>
-
-  
-  
-      <!-- <tr>
-  <td><label for="customerid">Customer ID</label></td>
-  <td><input type="text" id="id" name="customerid"  #uid="ngModel"  placeholder="Enter Customer ID" [(ngModel)]="preview.customerid" required ></td>
-   
-  </tr> -->
-  
-   
+    <h1 >Registration Form</h1>
   <div class="row">
-  
     <div class="col">
-  <!-- <label for="firstname">Customer FirstName</label> -->
    <input type="text" class="form-control" id="fname" name="firstname" #un="ngModel" placeholder="Enter FirstName"  [(ngModel)]="preview.firstname" required  pattern="([A-Za-z]+(['|\-|\s]?[A-Za-z]+)*)+">
     <div class="invalid-feedback">
    <div  *ngIf="un.invalid && (un.dirty||un.touched) && un.errors?.required">
@@ -110,23 +18,18 @@
    
    
    <div class="col">
-      <!-- <label for="lastname">Customer LastName</label> -->
      <input type="text" class="form-control" id="laname" name="lastname" #ul="ngModel" placeholder="Enter LastName" [(ngModel)]="preview.lastname" required pattern="([A-Za-z]+(['|\-|\s]?[A-Za-z]+)*)+">
      <div class="invalid-feedback">
      <div  *ngIf="ul.invalid && (ul.dirty||ul.touched) && ul.errors?.required ">
     Last Name is required
     </div>
-    
-    
+
       <div *ngIf="ul.errors?.pattern">Last Name Is Invalid</div>
       </div>
     </div>
   </div>
 
   <br>
- 
-   <!-- <label for="nationality">Nationality</label> -->
-  <!--<td><input type="text" id="nationality "name="nationality" placeholder="Enter Nationality" [(ngModel)]="preview.nationality" required></td>-->
   <div class="row">
     <div class="col">
   <p class="lead">Nationality</p>    
@@ -142,7 +45,7 @@
   </div>
       <div class="col">
         
-  <!-- <p class="lead">Gender </p>
+ <p class="lead">Gender </p>
   <div class="form-check form-check-inline">
   <input class="form-check-input" type="radio" id="gender" name="gender" #ugender="ngModel" value="Male" [(ngModel)]="preview.gender"  required>Male
 </div>
@@ -153,7 +56,7 @@
   <div  *ngIf="ugender.invalid && (ugender.dirty||ugender.touched) && ugender.errors?.required" >
 Gender is required
   </div>
-   </div> -->
+   </div>
  
 </div>
 </div>

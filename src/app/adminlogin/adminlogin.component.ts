@@ -21,7 +21,9 @@ export class AdminloginComponent implements OnInit {
       window.alert("Admin successfully logged in!");
       this.router.navigate(['admin']);
     }
+    
   }
 
 
+  
 }

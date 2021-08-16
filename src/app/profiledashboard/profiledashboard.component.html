@@ -1,50 +1,26 @@
-<!-- <div class="container">
-
-    <h2> Hi {{details.firstname}}!</h2>
-    <hr/>
-    <h4>
-        Your Details 
-    </h4>
-    <ul>
-        <li>
-         Email: {{details.emailid}}
-        </li>
-        <li>
-         Mobile: {{details.phonenumber}}
-        </li>
-        <li>
-         Annual Income: {{details.annualincome}}
-        </li>
-        
-        <li>
-         Employer Name: {{details.employername}}
-        </li>
-    </ul>
-    <div class="button">
-        <button type="button" class="btn btn-warning">Apply New Loan</button>
-         &nbsp; &nbsp;
-         <button type="button" class="btn btn-warning" >Loan Tracker</button>
-    </div>
- </div> -->
-
+ <div class="container">
+ 
 <div *ngFor="let c of cdx" >
+    
     <h2> Hi {{c.firstname}}!</h2>
     <hr/>
- <h4>
+ <h3 style="font-weight: bolder;">
      Your Details 
- </h4>
+ </h3>
 <ul>
-    <li>
+    
      Email: {{c.emailid}}
-    </li>
-    <li>
+    <br>
      Mobile: {{c.phonenumber}}
-    </li>
-    <li>
+    <br>
      Annual Income: {{c.annualincome}}
-    </li>
+     <br>
+     Customer ID: {{c.customerid}}
+    <br>
 </ul>
-<button (click)="logout()">LogOut</button>
+<button class="btn btn-primary" (click)="logout()">LogOut</button>
+
+</div>
 
 </div>
  

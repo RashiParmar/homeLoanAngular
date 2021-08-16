@@ -1,34 +1,4 @@
 <!-- 
-<div>
-    <form #myForm="ngForm" (ngSubmit)="saveData()">
-        <table>
-        
-            <tr>
-                <td><label for="custid">Customer ID</label> </td>   
-                <td><input  type="number" name="custid" [(ngModel)]="customerid" required></td>       
-            </tr>
-            <tr>
-                <td><label for="pancardnum">Pan Card Number</label> </td>   
-                <td><input  type="text" name="pancardnum" [(ngModel)]="document.pancardnum" required></td>       
-            </tr>
-            <tr>
-                <td><label for="aadharcardnum">Aadhar Card Number</label> </td>   
-                <td><input  type="number" name="aadharcardnum" [(ngModel)]="document.aadharcardnum" required></td>       
-            </tr>
-            <tr>
-                <td><label for="voteridnum">Voter ID Number</label> </td>   
-                <td><input  type="text" name="voteridnum" [(ngModel)]="document.voteridnum" required></td>       
-            </tr>
-            <tr>
-                <td></td>   
-                <td><button type="submit" >Save</button></td>     
-            </tr>
-            <button type="button" (click)="ApplicationDetails()">Next</button>
-    </table>
-
-    </form>    
-</div> -->
-
 <div class="container">
     <form #myForm="ngForm" (ngSubmit)="saveData()">
         <h2>User Document Details</h2>
@@ -57,4 +27,40 @@
     
 
     </form>    
-</div>
+</div> -->
+
+
+<div class="space">
+    <div class="bimage1">
+    <div class="container">
+        <form #myForm="ngForm" (ngSubmit)="saveData()">
+            <h2 style="color: black;">User Document</h2> 
+                <h2>Details</h2>
+                <p>
+                    <label style="color:black; font-size: 2vw;font-weight: bold;" for="custid">Customer ID</label>    
+                    <input  type="number" name="custid" [(ngModel)]="document.custid" required>       
+                </p>
+                <p>
+                    <label style="color:black; font-size: 2vw;font-weight: bold;" for="pancardnum">Pan Card Number</label>    
+                    <input  type="text" name="pancardnum" [(ngModel)]="document.pancardnum" required>       
+                </p> 
+                    <p>
+                <label style="color:black; font-size: 2vw;font-weight: bold;"  for="aadharcardnum">Aadhar Card Number</label>   
+                <input  type="number" name="aadharcardnum" [(ngModel)]="document.aadharcardnum" required>       
+            </p>
+                <p>
+                    <label style="color:black; font-size: 2vw;font-weight: bold;" for="voteridnum">Voter ID Number</label>  
+                    <input  type="text" name="voteridnum" [(ngModel)]="document.voteridnum" required>       
+                </p>
+                    <p>
+                    <button type="submit"  class="btn btn-primary" [disabled]="!myForm.valid" >  
+                        Save 
+                    </button>    
+                </p>
+                <button type="button" (click)="ApplicationDetails()" class="btn btn-primary">Next</button>
+        
+    
+        </form>    
+    </div>
+    </div>
+    </div>

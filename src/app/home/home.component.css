@@ -1,6 +1,4 @@
-body {
-    margin: 0;
-}
+
     .bimage {
         background-image: url("https://m.economictimes.com/thumb/msid-83033066,width-1200,height-900,resizemode-4,imgsize-202355/home-loan-above-rs-30-lakh-to-rs-75-lakh.jpg"); /* The image used */
         background-color: #cccccc; /* Used if the image is unavailable */
@@ -15,8 +13,17 @@ body {
     justify-content:center;
     padding-top: 21vh;     
     }
-    
-
+    .bimage1 {
+        background-image: url("https://cdn.dnaindia.com/sites/default/files/styles/full/public/2020/12/25/945565-homeloan-istock.jpg"); /* The image used */
+        background-color: #cccccc; /* Used if the image is unavailable */
+        /* You must set a specified height */
+       
+        background-position:centre; /* Center the image */
+        background-repeat: no-repeat; /* Do not repeat the image */
+        background-size: 1600px 600px; /* Resize the background image to cover the entire container */
+        margin: auto;
+       
+      }
 .header1 {
     display: flex;
     justify-content: space-between;
@@ -57,24 +64,20 @@ a {
     color: black;
 }
 
-/* getting money */
-.getting_money {
+.container1 {
     display: flex;
     justify-content: space-between;
-    padding-top: 21vh;
-    /* background-image: url(./assets/how-it-works-background.jpg); */
-    height: 108vh;
+    padding-top: 40vh;
+    height: 120vh;
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: scroll;
     background-size: cover;
 }
 
-.getting_main {
-
-    /* position: absolute;
-    top: 41vh; */
+.container2 {
     margin-left: 13vw;
+     padding-top: 10vh; 
 
 }
 
@@ -97,8 +100,6 @@ button:hover{
 }
 
 .right_div {
-
-    /* background-color: white; */
     margin: 11vw;
     width: 35vw;
     height: 90vh;
@@ -109,6 +110,8 @@ button:hover{
 .payment {
     text-align: center;
     align-items: center;
+    padding-left:90px;
+    padding-top: 80px;
 
 }
 
@@ -124,7 +127,6 @@ label {
 
 input {
     background: aliceblue;
-    /* max-width: 100%; */
     width: 25vw;
     height: 7vh;
 }
@@ -135,7 +137,6 @@ input {
     color: #ffffff;
 }
 
-/* getting money */
 .steps {
     display: flex;
     justify-content: space-between;
@@ -153,10 +154,8 @@ input {
     background-color: lightblue;
 }
 
-/* application */
 .application {
     padding: 50px 58px 50px 100px;
-    /* background-image: url("./assets/blue-poly-background.jpg"); */
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: scroll;
@@ -184,7 +183,6 @@ input {
     color: white;
 }
 
-/* manager contact */
 .manager {
     padding: 50px 58px 50px 100px;
 }
@@ -203,17 +201,14 @@ input {
 }
 .approval{
     padding: 50px 58px 50px 100px;
-    /* background-image: url("./assets/green-poly-background.jpg"); */
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: scroll;
     background-size: cover;
 }
 
-/* why_choose */
 .why_choose{
     padding: 50px 58px 50px 100px;
-    /* background-image: url("./assets/how-it-works-background.jpg"); */
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: scroll;
@@ -221,7 +216,6 @@ input {
 }
 .clicks{
     display: flex;
-    /* justify-content: center; */
     align-items: center;
 }
 .click_main{
@@ -240,23 +234,26 @@ input {
     font-size: 38px !important;
     color: aqua;
 }
-/*  */
+
 .choose_us{
     padding: 19px 85px;
 }
 .choose_text{
     text-align: center;
+    padding-top:80px;
 }
 .combine3{
     display: flex;
     justify-content: space-between;
     padding: 108px;
     padding-top: 80px;
+    border: solid;
 }
 .divs{
     background-color: lightgray;
     padding: 41px 67px;
     margin-right: 51px;
+    border: solid;
 }
 .howit{
     color: rgb(11 13 103);
@@ -264,7 +261,6 @@ input {
 
 }
 
-/* footer */
 .address{
     background-color: #2f2f2f;
     display: flex;
@@ -278,7 +274,6 @@ input {
     margin-right: 85px;
 }
 
-/*  */
 .footer{
     background-color: #1d1d1d;
     padding: 30px 147px;
