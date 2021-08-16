@@ -20,7 +20,15 @@ addValue(preview:Previewdetails)
   return this.httpClient.post(this.baseUrl+"/customer",preview);
 }
 
+addLogin(customerid?:number,password?:String)
+{
+  return this.httpClient.get(this.baseUrl+"/login/"+customerid+"/"+password);
+}
 
+searchbycustomerid(customerid:number)
+{
+  return this.httpClient.get(this.baseUrl+"/customer/"+customerid);
+}
 
 }
 

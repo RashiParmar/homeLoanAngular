@@ -1,0 +1,66 @@
+<!-- <div class="container">
+
+    <h2> Hi {{details.firstname}}!</h2>
+    <hr/>
+    <h4>
+        Your Details 
+    </h4>
+    <ul>
+        <li>
+         Email: {{details.emailid}}
+        </li>
+        <li>
+         Mobile: {{details.phonenumber}}
+        </li>
+        <li>
+         Annual Income: {{details.annualincome}}
+        </li>
+        
+        <li>
+         Employer Name: {{details.employername}}
+        </li>
+    </ul>
+    <div class="button">
+        <button type="button" class="btn btn-warning">Apply New Loan</button>
+         &nbsp; &nbsp;
+         <button type="button" class="btn btn-warning" >Loan Tracker</button>
+    </div>
+ </div> -->
+
+
+
+ <p>
+    Enter Customer Id
+</p>
+<table>
+<tr>
+<td><input type="text" placeholder="Enter Customer ID "  [(ngModel)]="customerid"><button (click)="searchbycustomerid()">Search</button></td>
+</tr>
+</table>
+<div>
+<br>
+<br>
+<table class="table1">
+    <thead style="color:green;">
+    <th>CustomerId</th>
+    <th>Customer Address</th>
+    <th>Customer Email-ID</th>
+    <th>Customer Annual Income</th>
+    <th>Customer Type Of Employment</th>
+    <th>Customer Organization Type</th>
+
+    
+    </thead>
+    <tr *ngFor="let c of cdx">
+    <td>{{c.customerid}}</td>
+    <td>{{c.address}}</td>
+    <td>{{c.emailid}}</td>
+    <td>{{c.annualincome}}</td>
+    <td>{{c.typeofemployement}}</td>
+    <td>{{c.organizationtype}}</td>
+
+
+
+    </tr>
+</table>
+</div>

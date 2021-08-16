@@ -34,7 +34,7 @@
         <h2>User Document Details</h2>
             <p>
                 <label for="custid">Customer ID</label>    
-                <input  type="number" name="custid" [(ngModel)]="customerid" required>       
+                <input  type="number" name="custid" [(ngModel)]="document.custid" required>       
             </p>
             <p>
                 <label for="pancardnum">Pan Card Number</label>    
@@ -49,7 +49,9 @@
                 <input  type="text" name="voteridnum" [(ngModel)]="document.voteridnum" required>       
             </p>
                 <p>
-                <input type="button" value="Save" class="btn btn-primary" [disabled]="!myForm.valid" >      
+                <button type="submit"  class="btn btn-primary" [disabled]="!myForm.valid" >  
+                    Save 
+                </button>    
             </p>
             <button type="button" (click)="ApplicationDetails()" class="btn btn-primary">Next</button>
     

@@ -29,9 +29,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 
 Mapping: one to many
-snapshot param,
-login backend,
-create account- delete,
+login frontend,
 account table->admin,
 
 

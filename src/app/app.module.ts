@@ -18,6 +18,7 @@ import { AboutusComponent } from './aboutus/aboutus.component';
 import { SignupComponent } from './signup/signup.component';
 import { SearchCustomerComponent } from './search-customer/search-customer.component';
 import { AdminloginComponent } from './adminlogin/adminlogin.component';
+import { ProfiledashboardComponent } from './profiledashboard/profiledashboard.component';
 
 
 @NgModule({
@@ -36,6 +37,7 @@ import { AdminloginComponent } from './adminlogin/adminlogin.component';
     SignupComponent,
     SearchCustomerComponent,
     AdminloginComponent,
+    ProfiledashboardComponent,
    
 
     

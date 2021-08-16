@@ -16,4 +16,18 @@ export class HomeComponent implements OnInit {
   Calulate(){
     this.router.navigate(['calculator']);
   }
+  Signup(){
+    this.router.navigate(['customer']);
+  }
+  Login(){
+    this.router.navigate(['login']);
+  }
+  FAQ()
+  {
+    this.router.navigate(['faq']);
+  }
+  AboutUs()
+  {
+    this.router.navigate(['aboutus']);
+  }
 }

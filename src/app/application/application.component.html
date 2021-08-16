@@ -39,8 +39,6 @@
     </form>    
 </div>-->
 
-
-
 <p>application works!</p>
 <div class="container">
     <form #DocForm="ngForm" (ngSubmit)="saveData()">
@@ -50,7 +48,7 @@
 
                 <p>
                 <label for="custid">Customer ID</label>  
-                <input  type="number" name="custid" [(ngModel)]="customerid" required>       
+                <input  type="number" name="custid" [(ngModel)]="application.custid" required>       
                 <p>
                 <p>
                 <label for="propertyname">Property Name</label>  
@@ -70,8 +68,8 @@
                 <p>
                 
                    
-               <input type="button" value="Submit" class="btn btn-primary" [disabled]="!DocForm.valid">     
-            
+               <button type="submit" class="btn btn-primary" [disabled]="!DocForm.valid">     
+            Save</button>
            <br>
            <br>
                   

@@ -13,7 +13,7 @@
 <div class="container">
 <h2> Login </h2>
 <div *ngIf="isSelected('login')" >  
-      <form #login ="ngForm" (ngSubmit)="formSubmit(login)" novalidate>
+      <form #login ="ngForm" (ngSubmit)="loginForm()" novalidate>
           <table>
             <tr>
               <td>Customer ID</td>
@@ -22,12 +22,12 @@
               <br>
               <tr>
               <td>Password</td>
-              <td><input type="password" name="password" id="password" required [(ngModel)]="pass"></td>
+              <td><input type="password" name="password" id="password" required [(ngModel)]="password"></td>
               </tr>
               <br>
               <tr>
               <td></td>
-              <button type="submit" [disabled]="!login.valid" class="btn btn-primary" (click)="loginForm()" > Login</button>
+              <button type="submit" [disabled]="!login.valid" class="btn btn-primary"  > Login</button>
              <button type="submit" [disabled]="!login.valid" class="btn btn-primary" (click)="NewUser()" > New User</button>
              <button type="submit"  class="btn btn-primary" (click)="Admin()" > Admin</button>
             </tr>
@@ -36,22 +36,22 @@
 </div>  
  
 <div *ngIf="isSelected('loan')">  
-  <form #loan ="ngForm" (ngSubmit)="formSubmit1(loan)" novalidate>
+  <form #loan ="ngForm" (ngSubmit)="loanForm()" novalidate>
       <table>
         
         <tr>
-          <td>Loan Id</td>
-          <td><input type="text" name="loanid" id="loanid" required [(ngModel)]="loanid"></td>
+          <td>Application ID</td>
+          <td><input type="number" name="applicationid" id="applicationid" required [(ngModel)]="applicationid"></td>
         </tr>
         <br>
         <tr>
-          <td>Date of Birth</td>
-          <td><input type="date" name="dateofbirth" id="dateofbirth" required [(ngModel)]="dateofbirth"></td>
+          <td>Mobile Number</td>
+          <td><input type="date" name="phonenumber" id="phonenumber" required [(ngModel)]="phonenumber"></td>
         </tr>
         <br>
         <tr>
           <td></td>
-         <td> <button type="submit" [disabled]="!loan.valid" class="btn btn-primary" (click)="loanForm()"> Login</button></td>
+         <td> <button type="submit" [disabled]="!loan.valid" class="btn btn-primary">Track</button></td>
         </tr>
       </table>
     </form>

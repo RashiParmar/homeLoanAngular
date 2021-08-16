@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
-/*this is to important some fonts from https://fonts.google.com/*/
 
 * {
   box-sizing: border-box;
@@ -7,42 +5,29 @@
 
 body {
   font-family: 'Muli', sans-serif;
-  background-color: #ecddee;
+  background-color:#FAF9F6;
 }
 
-li, a{
-    font-family: 'Muli', sans-serif;
-    font-size: 16px;
-    text-decoration: none;
-    font-weight: bold;
-}
+
 
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 30px 12%;
-    background-color: #e1a6e9;
+    height: 120px;
+    background-color:#66D3FA;
 }
 
 img{
-    height: 92px;
-    width: 204px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  width: 150px;
+  height:100px;
 }
 
-.nav_links li{
-    display: inline-block;
-    padding: 0px 20px;
-    text-decoration: none;
-}
 
-.nav_links li a{
-    transition: all 0.3s ease 0s;
-}
-
-.nav_links li a:hover{
-    color: #8d1a6a
-}
 
 h1 {
   margin: 50px 0 30px;
@@ -70,37 +55,16 @@ h2 {
   transition: 0.3s ease;
 }
 
-.faq.active {
-  background-color: #fff;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1), 0 3px 6px rgba(0, 0, 0, 0.1);
-}
 
-.faq.active::before,
-.faq.active::after {
-  content: '\f075';
-  font-family: 'Font Awesome 5 Free';
-  color: #2ecc71;
-  font-size: 7rem;
-  position: absolute;
-  opacity: 0.2;
-  top: 20px;
-  left: 20px;
-  z-index: 0;
-}
 
-.faq.active::before {
-  color: #3498db;
-  top: -10px;
-  left: -30px;
-  transform: rotateY(180deg);
-}
+
 
 .faq-title {
   margin: 0 35px 0 0;
 }
 
 .faq-text {
-  display: none;
+  display:contents;
   margin: 30px 0 0;
 }
 
@@ -108,40 +72,18 @@ h2 {
   display: block;
 }
 
-.faq-toggle {
-  background-color: transparent;
-  border: 0;
-  border-radius: 50%;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 16px;
-  padding: 0;
-  position: absolute;
-  top: 30px;
-  right: 30px;
-  height: 30px;
-  width: 30px;
-}
 
-.faq-toggle:focus {
-  outline: 0;
-}
 
-.faq-toggle .fa-times {
-  display: none;
-  color: white;
-}
 
-.faq.active .faq-toggle .fa-times {
-  display: block;
-}
 
-.faq.active .faq-toggle .fa-chevron-down {
-  display: none;
-}
+button {
+  padding: 15px;
+  background-color: aquamarine;
+  color: blue;
+  border: none;
+  border-radius: 50px;
 
-.faq.active .faq-toggle {
-  background-color: #9fa4a8;
+}
+button:hover{
+  background-color: yellowgreen;
 }

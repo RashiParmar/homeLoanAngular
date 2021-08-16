@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-faq',
@@ -7,9 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FaqComponent implements OnInit {
 
-  constructor() { }
+ 
+  constructor(private router:Router) { }
 
   ngOnInit(): void {
   }
-
+  Home(){
+    this.router.navigate(['home']);
+  }
+  Register()
+  {
+this.router.navigate(['customer']);
+  }
+  Login()
+  {
+    this.router.navigate(['login']);
+  }
 }

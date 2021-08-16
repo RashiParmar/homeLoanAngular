@@ -40,11 +40,11 @@ export class AdminComponent implements OnInit {
 
 
   deleteRow(applicationid:any){
-    //alert(applicationid)
-    // this.applicationService.deleteApp(applicationid).subscribe((data)=>{
-    //   console.log(data);
-    // })
-    // this.router.navigate([''])
+    alert(applicationid)
+    this.applicationService.deleteApp(applicationid).subscribe((data)=>{
+      console.log(data);
+    })
+    this.router.navigate([''])
   }
 
   CreateAccount() 
